@@ -1,0 +1,115 @@
+
+
+/*
+Theme Name: Custom Serial Theme
+Theme URI: 
+Author: Droid Dude
+Author URI: https://github.com/droid-dude
+Description: A custom theme for serial communication.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: custom-serial-theme
+*/
+
+
+
+
+
+body {
+    font-family: Consolas, monospace;
+    background-color: #282c34;
+    color: #ffffff;
+    margin: 0;
+    padding: 150px 20px 20px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #61dafb;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.log-box {
+    width: 80%;
+    height: 370px;
+    background-color: #1c1e22;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-family: Consolas, monospace;
+    margin-bottom: 20px;
+}
+
+.group-box-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 10px;
+}
+
+.group-box {
+    width: 300px;
+    padding: 10px;
+    border: 0.5px solid white;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 25px;
+}
+
+.group-box-container .group-box:last-child {
+    margin-right: 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-family: Consolas, monospace;
+}
+
+.button-container button:hover {
+    background-color: #21a1f1;
+}
+
+.button-container button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+    .group-box-container {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .group-box {
+        margin-right: 0;
+    }
+}
