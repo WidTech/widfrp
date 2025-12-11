@@ -154,6 +154,10 @@ async function checkFRP() {
     try {
         logToBox('- Setting ATD: ', 'white', false);
 
+        await writer.write("AT+FRPUNLOCK=3,0,0");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+
         await writer.write("AT+SWATD=0\r\n");
         await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -521,4 +525,5 @@ async function resetFRPUSA() {
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+
 }
